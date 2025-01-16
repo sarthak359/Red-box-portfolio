@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@font-face {
+
+    font-family: 'TanMonCheri'; 
+    src: url('TAN-MONCHERI.woff2') format('woff2'), 
+    url('TAN-MONCHERI.woff') format('woff'), 
+    url('TAN-MONCHERI.ttf') format('truetype');
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
@@ -10,6 +20,7 @@
     
 }
 html{
+    scroll-behavior: smooth;
     font-size: 62.5%;
 }
 body {
@@ -143,7 +154,6 @@ section {
 /* Style the headings */
 section h2 {
     font-size: 2.4rem;
-    margin-bottom: 10px;
     color: #b74b4b;
 }
 
@@ -249,8 +259,12 @@ span{
 .typing-text span{
     position: relative;
 }
-.work-exp{
-    padding-top: 50px;
+.edu{
+    padding-top: 90px;
+    overflow: visible; /* Hides any overflowing content */
+    position: relative; /* Ensures proper placement of elements inside */
+    max-width: 100%; /* Optional: Limit the maximum width of the section */
+    text-align: center;
 }
 
 
@@ -283,4 +297,172 @@ span{
         width: 70vw;
         margin-top: 4rem;
     }
+}
+.edu img {
+    width: 100%;               /* Makes the image scale to the full width */
+    height: 800px;          /* Maintains aspect ratio */
+    object-fit: contain;  /* Ensures image fits within the container */
+    object-position: center; /* Keeps the image centered */
+    display: block;
+    margin: 0 auto;       /* Centers the image horizontally */
+}
+.education{
+    padding-top: 90px;
+}
+
+.exp{
+    margin-top: 300px;
+
+    font-family: 'TanMonCheri', sans-serif;
+}
+.exp h1{
+    font-family: 'TanMonCheri', sans-serif;
+    font-size:  50px;
+    font-weight: lighter;
+    letter-spacing: 7px;
+    color: #ff0000;
+    padding-bottom: 70px;
+}
+/* Style for the Experience Section */
+#exp {
+    padding: 30px;
+    padding-top: 90px;
+}
+
+/* Exp container to hold both left and right divs */
+.exp-container {
+    display: flex;
+}
+.exp-container .mparent {
+    width: 100%;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .exp-container .mparent .mdiv1 { 
+        padding-top: 50px;
+        grid-area: 1 / 1 / 2 / 3; 
+        text-align: right;
+    }
+    .exp-container .mparent .mdiv2 { 
+        grid-area: 1 / 3 / 2 / 4; 
+        text-align: center;
+    }
+    .exp-container .mparent .mdiv2 img{
+        height: 500px;
+        width: 70px;
+        transition: transform 0.25s ease-in-out;
+        filter: drop-shadow(0px 4px 10px rgba(177, 1, 1, 0.5));
+    }
+    
+    .exp-container .mparent .mdiv2 img:hover{
+        transform: scale(1.1);
+    }
+    .exp-container .mparent .mdiv3 { 
+        padding-top: 50px;
+        grid-area: 1 / 4 / 2 / 6; 
+        text-align: left;
+    }
+
+    .exp-container .mparent .mdiv1 .lparent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+        
+            .exp-container .mparent .mdiv1 .lparent .ldiv1 { 
+                grid-area: 1 / 1 / 2 / 2; 
+                text-align: left;
+            }
+            .exp-container .mparent .mdiv1 .lparent .ldiv1 h2{
+                font-family: 'TanMonCheri', sans-serif;
+                font-size: 2rem;
+                color: red;
+            }
+            .exp-container .mparent .mdiv1 .lparent .ldiv2 { 
+                grid-area: 1 / 2 / 2 / 3; 
+                text-align: end;
+            }
+            .exp-container .mparent .mdiv1 .lparent .ldiv2 h3{
+                font-size: 1.5rem;
+                color: rgba(203, 203, 203, 0.842);
+                padding-top: 4px;
+            }
+    .exp-container .mparent .mdiv3 .lparent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+        
+            .exp-container .mparent .mdiv3 .lparent .ldiv1 { 
+                grid-area: 1 / 1 / 2 / 2; 
+                text-align: left;
+            }
+            .exp-container .mparent .mdiv3 .lparent .ldiv1 h2{
+                font-family: 'TanMonCheri', sans-serif;
+                font-size: 2rem;
+                color: red;
+            }
+            .exp-container .mparent .mdiv3 .lparent .ldiv2 { 
+                grid-area: 1 / 2 / 2 / 3; 
+                text-align: end;
+            }
+            .exp-container .mparent .mdiv3 .lparent .ldiv2 h3{
+                font-size: 1.5rem;
+                color: rgba(203, 203, 203, 0.842);
+                padding-top: 4px;
+            }
+
+
+
+#company{
+    color: #ffffff;
+    text-align: left;
+}
+#company h3{
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+.achievement-list{
+    margin-top: 40px;
+}
+.achievement-list ul {
+    text-align: left;
+    list-style: none; /* Remove default bullet points */
+    padding: 0;       /* Remove padding */
+    margin: 0;        /* Remove margin */
+}
+
+.achievement-list li {
+    position: relative;
+    padding-left: 30px; /* Add space for the red circle */
+    margin-bottom: 20px; /* Space between each point */
+    font-size: 16px;     /* Adjust font size */
+}
+
+.achievement-list li::before {
+    content: ''; /* Add the red circle */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px; /* Circle size */
+    height: 7px; /* Circle size */
+    background-color: red; /* Circle color */
+    border-radius: 50%; /* Make it a circle */
+}
+.compname{
+    
+    transition: transform 0.25s ease-in-out;
+}
+.compname:hover{
+    transform: scale(1.2);
 }

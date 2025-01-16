@@ -11,16 +11,15 @@
     <header>
         <a href="index.html" class="logo">Sarthak Aggarwal</a>
         <nav>
-            <a href="index.html" class="active"> Home</a>
-            <a href="#" >Services</a>
-            <a href="#" >Skills</a>
-            <a href="#" >Education</a>
-            <a href="#" >Experience</a>
+            <a href="#home" class="active"> Home</a>
+            <a href="#edu" >Education</a>
+            <a href="#exp" >Experience</a>
+            <a href="#" >Projects</a>
             <a href="#" >Contact</a>
         </nav>
     </header>
     <div class="container" style="margin: top 40px;">
-        <section class="home">
+        <section class="home" id="home">
             <div class="home-img">
                 <img src="main.jpg" alt="">
             </div>
@@ -39,28 +38,79 @@
         </section>
     
         <!-- Work Experience Section -->
-        <section class="work-exp">
-            <h2>Work Experience</h2>
-            <p>Details about your professional experience go here.</p>
+        <section class="edu" id="edu">
+            <img src="edu.svg" alt="" draggable="false">
         </section>
-    
-        <!-- Education Section -->
-        <section class="education">
-            <h2>Education</h2>
-            <p>Details about your academic background go here.</p>
+
+        
+
+        <section class="exp" id="exp">
+            <h1>EXPERIENCE</h1>
+            
+            <div class="exp-container">
+                
+                <div class="mparent">
+                    <div class="mdiv1">
+                        <div class="lparent">
+                            <div class="ldiv1"> 
+                                <h2 class="compname">
+                                    AutoCAD Designer
+                                </h2>
+                            </div>
+                            <div class="ldiv2"> 
+                                <h3>
+                                    May 2024 - present
+                                </h3>
+                            </div>
+                        </div>
+                        <div id="company">
+                            <h3>
+                                Quality Conveyers, faridabad
+                            </h3>
+                        </div>
+                        <div class="achievement-list">
+                            <ul>
+                                <li>Created over 50 precise and detailed CAD drawings for laser cutting and engraving machines, ensuring millimeter-level accuracy.</li>
+                                <li>Played a key role in meeting 100% of strict project deadlines, contributing to efficient project execution.</li>
+                                <li>Self-placed part-time role: independently secured the position and effectively managed responsibilities.</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div class="mdiv2">
+                        <img src="1.png" alt="">
+                    </div>
+                    <div class="mdiv3">
+                        <div class="lparent">
+                            <div class="ldiv1"> 
+                                <h2 class="compname">
+                                    Frontend Developer
+                                </h2>
+                            </div>
+                            <div class="ldiv2"> 
+                                <h3>
+                                    June 2024 - July 2024
+                                </h3>
+                            </div>
+                        </div>
+                        <div id="company">
+                            <h3>
+                                OctaNET Services Pvt ltd. , Remote
+                            </h3>
+                        </div>
+                        <div class="achievement-list">
+                            <ul>
+                                <li>Designed and developed 10+ responsive webpages using HTML, CSS, and JavaScript, enhancing user experience and engagement.</li>
+                                <li>Collaborated with a development team to integrate front-end elements, achieving 100% functionality and visually appealing designs.</li>
+                                <li>Gained exposure to industry best practices, improving proficiency in modern web technologies such as responsive design and cross-browser compatibility.</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
         </section>
-    
-        <!-- Projects Section -->
-        <section class="projects">
-            <h2>Projects</h2>
-            <p>Details about your projects go here.</p>
-        </section>
-    
-        <!-- Contact Section -->
-        <section class="contact">
-            <h2>Contact Me</h2>
-            <p>Contact form or details go here.</p>
-        </section>
+        
     </div>
     
     <!-- Load library from the CDN -->
@@ -74,6 +124,29 @@
         backSpeed:100,
         loop:true,
     });
+    // Smooth scroll to Education section
+document.querySelector('a[href="#edu"]').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector('#edu').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+document.querySelector('a[href="#exp"]').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector('#exp').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
+
+// Smooth scroll to Home section
+document.querySelector('a[href="#home"]').addEventListener('click', function (e) {
+    e.preventDefault(); 
+    document.querySelector('#home').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
     </script>
     <script>
         // Function to apply the scroll effect
